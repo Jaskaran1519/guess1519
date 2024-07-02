@@ -1,4 +1,4 @@
-//app/api/search/route.js
+// app/api/search/route.js
 import { NextResponse } from "next/server";
 import fetch from "node-fetch";
 
@@ -34,3 +34,42 @@ export async function GET(request) {
     );
   }
 }
+
+//app/api/search/route.js
+
+// import { useState } from "react";
+
+// export default function SearchPage() {
+//   const [searchTerm, setSearchTerm] = useState("");
+//   const [results, setResults] = useState([]);
+
+//   const handleSearch = async () => {
+//     try {
+//       const response = await fetch(
+//         `/api/search?term=${encodeURIComponent(searchTerm)}`
+//       );
+//       const data = await response.json();
+//       setResults(data.results);
+//     } catch (error) {
+//       console.error("Error fetching search results:", error);
+//     }
+//   };
+
+//   return (
+//     <div className="m-10">
+//       <h1>Search Page</h1>
+//       <input
+//         type="text"
+//         placeholder="Enter search term"
+//         value={searchTerm}
+//         onChange={(e) => setSearchTerm(e.target.value)}
+//       />
+//       <button onClick={handleSearch}>Search</button>
+//       <ul>
+//         {results.map((result, index) => (
+//           <li key={index}>{result}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
